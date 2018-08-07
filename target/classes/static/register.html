@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Movie Critic</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/js/register.js"></script>
+    <!-- <script type="text/javascript">
+        function Validate() {
+            var pass1 = document.getElementById("password").value;
+            var pass2 = document.getElementById("confirmpassword").value;
+            if (pass1 != pass2) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            return true;
+        }
+    </script> -->
+</head>
+
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Movie Critic</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/index">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="register.html">Register</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<form name="myForm">
+    <div class="signup-form">
+        <div class="form">
+            <h2>Registration</h2>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label>First Name</label>
+                        <input type="text" id="firstname" name="first_name" class="form-control" placeholder="example: Jon"
+                                title="Only letters are accepted" required></div>
+
+                    <div class="col-xs-6">
+                        <label>Last Name</label>
+                        <input type="text" id="lastname" name="last_name" class="form-control" placeholder="example: Doe"
+                                title="Only letters are accepted" required></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label>Email</label>
+                        <input type="text" id="email" name="email" class="form-control" placeholder="example@email.com"
+                                title="Enter a valid email address--example@email.com"
+                               required></div>
+                    <div class="col-xs-6">
+                        <label>Username</label>
+                        <input type="text" id="username" name="username" class="form-control" placeholder="example: jondoe5"
+                               title="Please enter a valid Username" required></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label>Password</label>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Password"
+                                title="Please choose a Password of atleast 8 characters" required></div>
+                    <div class="col-xs-6">
+                        <label>Confirm Password</label>
+                        <input type="password" name="confirmpassword" id="confirmpassword" class="form-control"
+                               placeholder="Confirm Password" required></div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <button type="button" class="butn btn-primary btn-lg" onclick="validate()">Sign Up</button>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+<footer class="py-3 bg-dark" style="margin: -1px">
+    <div class="container">
+        <p class="m-1 text-center text-white">Copyright &copy; Movie Critic 2018</p>
+    </div>
+</footer>
+</body>
+</html>

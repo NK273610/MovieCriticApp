@@ -1,0 +1,80 @@
+.form-control{
+	height: 40px;
+	background:#fffdd0;
+	box-shadow:none;
+	border: none;
+}
+
+.form-control, .btn{
+	border-radius: 2px;
+}
+.signup-form{
+	width: 500px;
+	margin: 30px auto;
+}
+.form{
+	color: #000000;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	background: #a0d6b4;
+	padding: 30px;
+	margin-top: 85px;
+}
+
+.signup-form .form-group{
+	margin-bottom: 20px;
+}
+
+.signup-form .row div:first-child{
+	padding-right: 10px;
+}
+
+.signup-form .row div:last-child{
+	padding-left: 10px;
+}
+
+
+.butn{
+	font-size: 16px;
+	font-weight: bold;
+	background:#FF0000;
+	border: none;
+	margin-left: 9px;
+	min-width: 140px;
+}
+
+
+.signup-form a:hover{
+	text-decoration: none;
+}
+
+.row{
+
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: 8px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 100px;
+    /* bottom = footer height */
+    padding: 25px;
+}
+
+footer {
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+}

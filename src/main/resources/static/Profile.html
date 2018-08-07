@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Movie Critic</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/register.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/js/home.js"></script>
+<style>
+.form-control {
+	margin: auto;
+	height: 28px;
+	background: #fffdd0;
+	box-shadow: none;
+	border: none;
+}
+
+.form-control, .btn {
+	border-radius: 2px;
+}
+
+.signup-form {
+	width: 70%;
+	margin: 30px auto;
+}
+
+.form {
+	height: 300px;
+	color: #000000;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	background: #a0d6b4;
+	padding: 30px;
+	margin-top: 85px;
+}
+
+.signup-form .form-group {
+	margin-bottom: 10px;
+}
+
+.signup-form .row div:first-child {
+	padding-right: 10px;
+}
+
+.signup-form .row div:last-child {
+	padding-left: 10px;
+}
+
+.butn {
+	font-size: 16px;
+	font-weight: bold;
+	background: #FF0000;
+	border: none;
+	margin-left: 100px;
+	min-width: 100px;
+}
+
+.signup-form a:hover {
+	text-decoration: none;
+}
+
+.row {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: 8px;
+}
+
+.profile-image {
+	border-radius: 8px 8px 0px 0px;
+	margin-top: -200px;
+	margin-left: 500px;
+	height: 175px;
+	width: 180px;
+}
+
+.pic-bar {
+	border-radius: 0px 0px 8px 8px;
+	margin-top: 175px;
+	width: 180px;
+	height: 25px;
+	text-align: center;
+}
+
+#upload {
+	cursor: pointer;
+	font-size: 25px;
+	color: #fffdd0;
+}
+
+#upload:hover {
+	opacity: 0.6;
+}
+</style>
+</head>
+
+
+<body  onload="getUserProfile()">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Movie Critic</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarResponsive" aria-controls="navbarResponsive"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active"><a class="nav-link" href="/index">Home
+							<span class="sr-only">(current)</span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="/changepassword.html">Change Password</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="/logout">Logout</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<form id="userProfileForm" name="userProfileForm" method="post">
+		<div class="signup-form">
+			<div class="form">
+				<h2>User Profile</h2>
+				<div class="form-group">
+					<div class="row" style="width: 600px;">
+						<lable style="margin-top: 3px;">First Name:</lable>
+						<div class="col-xs-6">
+							<input type="text" id="first" name="firstName" disabled value=""
+								class="form-control" placeholder="Enter First Name"
+								title="Enter Your First Name">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="row" style="width: 600px;">
+						<lable style="margin-top: 3px;">Last Name:</lable>
+						<div class="col-xs-6">
+							<input type="text" id="last" name="lastName" value="" disabled
+								class="form-control" placeholder="Enter Last Name"
+								title="Enter Your Last Name">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="row" style="width: 600px;">
+						<lable style="margin-top: 3px; margin-right: 37px;">Email:</lable>
+						<div class="col-xs-6">
+							<input type="text" disabled id="username" name="email" value=""
+								title="Enter Your Email-Id" class="form-control"
+								placeholder="example@email.com"
+								pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.\.[a-z]{2,3}$" required>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					<input type="button" class="butn btn-primary btn-lg"
+						onclick="change()" id="myButton" value="Edit">
+				</div>
+
+				<div id="uploadPreview" class="profile-image">
+					<img id="myImg1"
+						style="height: 175px; width: 180px; border-radius: 8px 8px 0px 0px;"
+						src="upload/dummyPic.jpg"> <input type='file'
+						name="profileImage" style="visibility: hidden;" id="uploadbtn">
+				</div>
+
+			</div>
+
+
+		</div>
+
+
+		</div>
+		</div>
+
+	</form>
+	<footer class="py-3 bg-dark" style="margin: -1px">
+		<div class="container">
+			<p class="m-1 text-center text-white">Copyright &copy; Movie
+				Critic 2018</p>
+		</div>
+	</footer>
+</body>
+<script>
+	$(function() {
+		$(":file").change(function() {
+			if (this.files && this.files[0]) {
+				var reader = new FileReader();
+				reader.onload = imageIsLoaded;
+				reader.readAsDataURL(this.files[0]);
+			}
+		});
+	});
+
+	function imageIsLoaded(e) {
+		$('#myImg1').attr('src', e.target.result);
+	};
+</script>
+<script>
+	function change() {
+		if (document.getElementById("myButton").value == "Save") {
+			updateUserProfile();
+		} else {
+			document.getElementById("myButton").value = "Save";
+			var fname = document.getElementById("first");
+			var lname = document.getElementById("last");
+			var btn = document.getElementById("uploadbtn").style.visibility = "visible";
+			fname.disabled = false;
+			lname.disabled = false;
+		}
+
+	}
+</script>
+</html>

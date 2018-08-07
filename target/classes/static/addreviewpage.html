@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title>Movie Critic</title>
+    <!--    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" >
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/moviereview.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/review.js"></script>
+    <script type="text/javascript">
+
+        // function updateHidden(rating) {
+        //     document.getElementById("stars").value = rating.value;
+        // }
+
+
+    </script>
+</head>
+<body>
+
+<!--reference-- https://getbootstrap.com/docs/4.0/components/navbar/-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Movie Critic</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+        <li class="nav-item"><a class="nav-link" href="/logout">Logout</a>
+					</li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--<form action="one" method="post" >-->
+<form>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-8 mb-4">
+                <h3 align="center" style="margin-top: 20px">Movie Review</h3>
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <!--<div class="control-group form-group">-->
+                        <!--<div class="controls">-->
+                            <!--<label>User Name:</label>-->
+                            <!--<input type="text" class="form-control" id="user_name" name="user_name"/>-->
+                            <!--<p class="help-block"></p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+
+                    <!--<input type="hidden" class="form-control" id="movie_id" name="movie_id"/>-->
+
+                    <!--<div class="control-group form-group">-->
+                    <!--<div class="controls">-->
+                        <!--<label>Movie ID:</label>-->
+                        <!--<input type="text" class="form-control" id="movie_id" name="movie_id"/>-->
+
+                        <!--<p class="help-block"></p>-->
+                    <!--</div>-->
+                    <!--</div>-->
+
+                    <input type="hidden" id="stars" name="stars"/>
+
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Movie Rating:</label>
+
+                            <div>
+                                <fieldset class="rating">
+                                    <input type="radio" id="10" name="rating" value="10" onclick="updateHidden(this);"/><label class = "full" for="10"></label>
+                                    <input type="radio" id="9half" name="rating" value="9.5" onclick="updateHidden(this);"/><label class="half" for="9half"></label>
+                                    <input type="radio" id="9" name="rating" value="9" onclick="updateHidden(this);"/><label class = "full" for="9"></label>
+                                    <input type="radio" id="8half" name="rating" value="8.5" onclick="updateHidden(this);"/><label class="half" for="8half"></label>
+                                    <input type="radio" id="8" name="rating" value="8" onclick="updateHidden(this);"/><label class = "full" for="8"></label>
+                                    <input type="radio" id="7half" name="rating" value="7.5" onclick="updateHidden(this);"/><label class="half" for="7half"></label>
+                                    <input type="radio" id="7" name="rating" value="7" onclick="updateHidden(this);"/><label class = "full" for="7"></label>
+                                    <input type="radio" id="6half" name="rating" value="6.5" onclick="updateHidden(this);"/><label class="half" for="6half"></label>
+                                    <input type="radio" id="6" name="rating" value="6" onclick="updateHidden(this);"/><label class = "full" for="6"></label>
+                                    <input type="radio" id="5half" name="rating" value="5.5" onclick="updateHidden(this);"/><label class="half" for="5half"></label>
+                                    <input type="radio" id="5" name="rating" value="5" onclick="updateHidden(this);"/><label class = "full" for="5"></label>
+                                    <input type="radio" id="4half" name="rating" value="4.5" onclick="updateHidden(this);"/><label class="half" for="4half"></label>
+                                    <input type="radio" id="4" name="rating" value="4" onclick="updateHidden(this);"/><label class = "full" for="4"></label>
+                                    <input type="radio" id="3half" name="rating" value="3.5" onclick="updateHidden(this);"/><label class="half" for="3half"></label>
+                                    <input type="radio" id="3" name="rating" value="3" onclick="updateHidden(this);"/><label class = "full" for="3"></label>
+                                    <input type="radio" id="2half" name="rating" value="2.5" onclick="updateHidden(this);"/><label class="half" for="2half"></label>
+                                    <input type="radio" id="2" name="rating" value="2" onclick="updateHidden(this);"/><label class = "full" for="2"></label>
+                                    <input type="radio" id="1half" name="rating" value="1.5" onclick="updateHidden(this);"/><label class="half" for="1half"></label>
+                                    <input type="radio" id="1" name="rating" value="1" onclick="updateHidden(this);"/><label class = "full" for="1"></label>
+                                    <input type="radio" id="half" name="rating" value="0.5" onclick="updateHidden(this);"/><label class="half" for="half"></label>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                <br>
+
+
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Likabilty:</label>
+                            <br>
+                            <div>
+                            <select id="likeoption" name="likeoption">
+                                <option value="0">Select an option  </option>
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Age Group:</label>
+                            <br>
+                            <div>
+                                <select id="agegrp" name="agegrp">
+                                    <option value="0">Select an option  </option>
+                                    <option value="0-10">0-10</option>
+                                    <option value="11-20">11-20</option>
+                                    <option value="21-30">21-30</option>
+                                    <option value="31-40">31-40</option>
+                                    <option value="41-50">41-50</option>
+                                    <option value="51-60">51-60</option>
+                                    <option value="61-70">61-70</option>
+                                    <option value="71-80">71-80</option>
+                                    <option value="81-90">81-90</option>
+                                    <option value="91-100">91-100</option>
+                                    <option value="101-120-">101-120</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Movie Review:</label>
+                            <div>
+                            <textarea id="movie_review" name="movie_review" rows="5" cols="57" placeholder="Write your review here"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="success"></div>
+                    <button type="button" class="btn btn-primary" id="sendMessageButton" onclick="addReviews()" >Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</form>
+
+<footer class="py-3 bg-dark">
+    <div class="container">
+        <p class="m-1 text-center text-white">Copyright &copy; Movie Critic 2018</p>
+    </div>
+</footer>
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

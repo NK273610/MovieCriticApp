@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api>
+	<baseURL>https://api.themoviedb.org/3/</baseURL>
+	<key>791ba90157746ad2a5d4342a49ce649f</key>
+	<upcoming>movie/upcoming?api_key=API_KEY&amp;language=en-CA&amp;page=1
+	</upcoming>
+	<popular>movie/top_rated?api_key=API_KEY&amp;language=en-US&amp;page=1
+	</popular>
+	<moviebyid>movie/MOVIE_ID?api_key=API_KEY</moviebyid>
+	<searchmoviebyname>search/movie?api_key=API_KEY&amp;language=en-US&amp;query=MOVIE_NAME</searchmoviebyname>
+</api>

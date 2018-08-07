@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Movie Critic</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/register.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/js/login.js"></script>
+</head>
+
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Movie Critic</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarResponsive" aria-controls="navbarResponsive"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item "><a class="nav-link" href="/index">Home <span
+							class="sr-only">(current)</span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="/logout">Logout</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<form method="get"  style="margin-bottom: 225px" >
+		<div class="signup-form">
+			<div class="form">
+			<div style="color:red;" id="feedback"></div>
+				<h2>Forgot Password ?</h2>
+				<div class="form-group">
+					<div class="row">
+						<div class="col-xs-6">
+							<label>Email</label> <input type="text" id="userEmail" name="userEmail"
+								class="form-control" placeholder="example@email.com"
+								pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.\.[a-z]{2,3}$"
+								required>
+						</div>
+					</div>
+				</div>
+
+				
+
+				<div class="form-group">
+					<button name="RecoverPassword" type="button" onclick="forgotPassword()" class="butn btn-primary btn-lg">Reset Password</button>
+				</div>
+
+				
+			</div>
+
+		</div>
+	</form>
+
+	<footer class="py-3 bg-dark" style="margin: -1px">
+		<div class="container">
+			<p class="m-1 text-center text-white">Copyright &copy; Movie
+				Critic 2018</p>
+		</div>
+	</footer>
+</body>
+</html>
